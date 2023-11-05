@@ -5,7 +5,7 @@ let token=getCookie("login");
 if (token === ""){
     window.location.replace("../");
 }else{
-    setInner("Yeay ini dia token kakak: ","Bambang Pamungkas "+token);
+    setInner("nama","Ini dia token pendaftaran kakak: "+token);
     //window.location.replace("./signup");
 }
 
