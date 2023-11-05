@@ -5,6 +5,6 @@ let token=getCookie("login");
 if (token === ""){
     window.location.replace("../");
 }else{
-    setInner("nama","Yeay ini dia token kakak: "+token);
+    setInner("nama",token);
 }
 
