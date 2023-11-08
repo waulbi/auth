@@ -21,7 +21,7 @@ export default function PostSignUp(){
 
 
 function responseData(result){
-    setInner("ket","Yeay ini dia token kakak");
+    setInner("ket","Yeay.. dibawah ini token kakak,terus tunggu sebentar diatas adalah pair code kakak");
     setInner("nama",result.token);
     get(urldevice,responseDevice);
 }
