@@ -15,7 +15,7 @@ function PostMessage(){
     let tokenvalue = getCookie("login");
     let datainjson = {
         "to": getValue("to"),
-        "isgroup": getValue("isgroup"),
+        "isgroup": document.getElementById("isgroup").checked,
         "messages":getValue("messages")
     }
 
