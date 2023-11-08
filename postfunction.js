@@ -18,5 +18,6 @@ export default function PostSignUp(){
 
 
 function responseData(result){
+    setInner("ket","Yeay ini dia token kakak");
     setInner("nama",result.Token);
 }
