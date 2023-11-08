@@ -25,6 +25,6 @@ function PostMessage(){
 
 
 function responseData(result){
-    setInner("ket","Yeay ini dia token kakak");
-    setInner("nama",result.token);
+    setInner("ket","Yeay id terkirim nya di bawah");
+    setInner("nama",result.response);
 }
