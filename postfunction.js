@@ -18,5 +18,5 @@ export default function PostSignUp(){
 
 
 function responseData(result){
-    setInner("nama",result.token);
+    setInner("nama",result.Token);
 }
