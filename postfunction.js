@@ -26,6 +26,6 @@ function responseData(result){
     get(urldevice,responseDevice);
 }
 
-function responseDevice(results){
+function responseDevice(result){
     setInner("judul","PAIR CODE: "+result.code);
 }
