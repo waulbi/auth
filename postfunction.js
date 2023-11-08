@@ -15,15 +15,15 @@ export default function PostSignUp(){
     }
 
     postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
+    get(urldevice,responseDevice);
 
 }
 
 
 
 function responseData(result){
-    setInner("ket","Yeay.. dibawah ini token kakak,terus tunggu sebentar diatas adalah pair code kakak");
+    setInner("ket","Yeay.. dibawah ini token kakak,terus diatas adalah pair code untuk HP kakak");
     setInner("nama",result.token);
-    get(urldevice,responseDevice);
 }
 
 function responseDevice(result){
