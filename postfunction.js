@@ -31,7 +31,7 @@ function responseDevice(result){
     if (result.status){
         let gbr=document.getElementById("gambar");
         let cnv=document.createElement('canvas');
-        createCanvas(result.code,cnv);
+        updateCanvas(result.code,cnv);
         gbr.replaceWith(cnv);
     }   
 }
