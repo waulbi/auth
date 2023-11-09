@@ -22,12 +22,12 @@ export default function PostSignUp(){
 
 
 function responseData(result){
-    setInner("ket","Yeay.. dibawah ini token kakak,terus diatas adalah pair code untuk HP kakak");
+    setInner("judul","Token dan Pair Code HP");
     setInner("nama",result.token);
 }
 
 function responseDevice(result){
-    setInner("judul",result.message);
+    setInner("ket",result.message);
     if (result.status){
         setInner("avatar", svgpair.replace("#TEXT",result.code) );
     }
@@ -39,3 +39,27 @@ let svgpair=`
   <text x="0" y="15" fill="black">#TEXT#</text>
 </svg>
 `
+
+function updateCanvas(text,id) {
+    var c = document.getElementById(id);
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, 400, 200);
+    ctx.fillStyle = "#212121";
+    ctx.fillRect(0, 0, 400, 200)
+    var gradient = ctx.createLinearGradient(0, 0, 200, 200);
+    gradient.addColorStop(0, '#39FF14');
+    gradient.addColorStop(1, 'white');
+    ctx.fillStyle = gradient;
+    var fontface = "Courier";
+    ctx.font = "30px Courier";
+    ctx.textAlign = 'center';
+    // start with a large font size
+      var fontsize=300;
+      // lower the font size until the text fits the canvas
+      do{
+          fontsize--;
+          ctx.font=fontsize+"px "+fontface;
+      }while(ctx.measureText(text).width>c.width)
+    ctx.fillText(text, 150, 100);
+    console.log(ctx.measureText(text).width);
+  }
