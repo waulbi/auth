@@ -28,7 +28,7 @@ function responseData(result){
 
 function responseDevice(result){
     setInner("judul",result.message);
-    if (!result.status){
+    if (result.status){
         setInner("avatar",result.code);
     }
     
