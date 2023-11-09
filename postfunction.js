@@ -29,19 +29,14 @@ function responseData(result){
 function responseDevice(result){
     setInner("ket",result.message);
     if (result.status){
-        setInner("avatar", svgpair.replace("#TEXT",result.code) );
-    }
-    
+        let gbr=document.getElementById("gambar");
+        let cnv=document.createElement('canvas');
+        createCanvas(result.code,cnv);
+        gbr.replaceWith(cnv);
+    }   
 }
 
-let svgpair=`
-<svg height="200" width="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="15" y="15" fill="black">#TEXT#</text>
-</svg>
-`
-
-function updateCanvas(text,id) {
-    var c = document.getElementById(id);
+function updateCanvas(text,c) {
     var ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 400, 200);
     ctx.fillStyle = "#212121";
