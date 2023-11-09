@@ -27,5 +27,9 @@ function responseData(result){
 }
 
 function responseDevice(result){
-    setInner("judul","PAIR CODE: "+result.code);
+    setInner("judul",result.message);
+    if (!result.status){
+        setInner("avatar",result.code);
+    }
+    
 }
