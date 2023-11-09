@@ -29,7 +29,13 @@ function responseData(result){
 function responseDevice(result){
     setInner("judul",result.message);
     if (result.status){
-        setInner("avatar",result.code);
+        setInner("avatar", svgpair.replace("#TEXT",result.code) );
     }
     
 }
+
+let svgpair=`
+<svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="15" fill="red" transform="rotate(30 20,40)">#TEXT#</text>
+</svg>
+`
