@@ -35,7 +35,7 @@ function responseDevice(result){
 }
 
 let svgpair=`
-<svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="15" fill="red" transform="rotate(30 20,40)">#TEXT#</text>
+<svg height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="15" fill="black">#TEXT#</text>
 </svg>
 `
