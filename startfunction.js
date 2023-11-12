@@ -14,6 +14,7 @@ export default function StartDevice(){
 
 function responseStartDevice(result){
     setInner("ket",result.message);
+    setInner("btn","Selesai");
     if (result.status){
         let gbr=document.getElementById("gambar");
         let cnv=document.createElement('canvas');
