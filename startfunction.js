@@ -3,30 +3,13 @@ import {setInner,getValue} from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "https://jscroot.github.io/api/croot.js";
 
-let urldevice = "https://api.wa.my.id/api/device/"+getCookie("login");
+let urlstartdevice = "https://api.wa.my.id/api/start/device/"+getCookie("login");
 
-export default function PostSignUp(){
-    let target_url = "https://api.wa.my.id/api/signup";
-    let tokenkey = "token";
-    let tokenvalue = getCookie("login");
-    let datainjson = {
-        "url": getValue("url"),
-        "secret": getValue("secret")
-    }
-
-    postWithToken(target_url,tokenkey,tokenvalue,datainjson,responseData);
-    get(urldevice,responseDevice);
-
+export default function StartDevice(){
+    get(urlstartdevice,responseStartDevice);
 }
 
-
-
-function responseData(result){
-    setInner("judul","Token dan Pair Code HP");
-    setInner("nama",result.token);
-}
-
-function responseDevice(result){
+function responseStartDevice(result){
     setInner("ket",result.message);
     if (result.status){
         let gbr=document.getElementById("gambar");
