@@ -6,6 +6,9 @@ import { get } from "https://jscroot.github.io/api/croot.js";
 let urldevice = "https://api.wa.my.id/api/device/"+getCookie("login");
 
 export default function PostSignUp(){
+    const button = document.getElementById('btn');
+    button.setAttribute('disabled', '');
+    setInner("btn","Loading...");
     let target_url = "https://api.wa.my.id/api/signup";
     let tokenkey = "token";
     let tokenvalue = getCookie("login");

@@ -6,6 +6,9 @@ import { get } from "https://jscroot.github.io/api/croot.js";
 let urlstartdevice = "https://api.wa.my.id/api/start/device/"+getCookie("login");
 
 export default function StartDevice(){
+    const button = document.getElementById('btn');
+    button.setAttribute('disabled', '');
+    setInner("btn","Loading...");
     get(urlstartdevice,responseStartDevice);
 }
 
