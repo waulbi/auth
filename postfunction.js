@@ -25,7 +25,7 @@ export default function PostSignUp(){
 
 function responseData(result){
     setInner("judul","Token dan Pair Code HP");
-    setInner("nama",result.token);
+    setInner("nama",result.data.token);
 }
 
 function responseDevice(result){

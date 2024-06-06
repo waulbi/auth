@@ -30,5 +30,5 @@ function PostMessage(){
 
 function responseData(result){
     setInner("ket","Yeay id terkirim nya di bawah");
-    setInner("nama",result.response);
+    setInner("nama",result.data.response);
 }
