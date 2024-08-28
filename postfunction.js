@@ -3,13 +3,13 @@ import {setInner,getValue} from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "https://jscroot.github.io/api/croot.js";
 
-let urldevice = "https://api.wa.my.id/api/device/"+getCookie("login");
+let urldevice = "http://172.18.0.148:8080/api/device/+"+getCookie("login");
 
 export default function PostSignUp(){
     const button = document.getElementById('btn');
     button.setAttribute('disabled', '');
     setInner("btn","Loading...");
-    let target_url = "https://api.wa.my.id/api/signup";
+    let target_url = "http://172.18.0.148:8080/api/signup";
     let tokenkey = "token";
     let tokenvalue = getCookie("login");
     let datainjson = {

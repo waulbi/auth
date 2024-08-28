@@ -5,7 +5,7 @@ import PostSignUp from "./postfunction.js";
 
 let token=getCookie("login");
 if (token === ""){
-    window.location.replace("../");
+    window.location.replace("https://wa.ulbi.ac.id/");
 }else{
     onClick('btn',PostSignUp);
 }
