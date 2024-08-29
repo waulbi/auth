@@ -4,7 +4,7 @@ import { postJSON } from "https://jscroot.github.io/api/croot.js";
 
 let token=getCookie("login");
 if (token === ""){
-    window.location.replace("https://wa.ulbi.ac.id/");
+    window.location.replace("../");
 }else{
     window.PostMessage = PostMessage;
 }
