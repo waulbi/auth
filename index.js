@@ -4,7 +4,7 @@ import PostSignUp from "./postfunction.js";
 
 let token = getCookie("login");
 if (token === "") {
-  // window.location.replace("../");
+  window.location.replace("../");
 } else {
   onClick("btn", PostSignUp);
 }

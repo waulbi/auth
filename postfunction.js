@@ -8,7 +8,8 @@ let urldevice = "http://172.18.0.148:8080/api/device/+"+getCookie("login");
 export default function PostSignUp(){
     const button = document.getElementById('btn');
 
-    button.setAttribute('disabled', '');
+    button.addEventListener('click', function(){
+    button.setAttribute('disabled', 'true');
     setInner("btn","Loading...");
     let target_url = "http://172.18.0.148:8080/api/signup";
     let tokenkey = "token";
@@ -16,16 +17,11 @@ export default function PostSignUp(){
     let datainjson = {
         "url": getValue("url"),
         "secret": getValue("secret")
-    }
-    if (button.click) {
-        console.log(JSON.stringify())
-    }
+    };
     postJSON(target_url,tokenkey,tokenvalue,datainjson,responseData);
     get(urldevice,responseDevice);
-
+});
 }
-
-
 
 function responseData(result){
     setInner("judul","Token dan Pair Code HP");
