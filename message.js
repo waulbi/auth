@@ -13,7 +13,7 @@ function PostMessage(){
     const button = document.getElementById('btn');
     button.setAttribute('disabled', '');
     setInner("btn","Loading...");
-    let target_url = "http://172.18.0.148:8080/api/send/message/text";
+    let target_url = "https://gw.ulbi.ac.id/api/send/message/text";
     let tokenkey = "token";
     let tokenvalue = getCookie("login");
     let datainjson = {
