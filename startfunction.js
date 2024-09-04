@@ -2,7 +2,7 @@ import {setInner} from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "https://jscroot.github.io/api/croot.js";
 
-let urlstartdevice = "https://gw.ulbi.ac.id/api/device/+"+getCookie("login");
+let urlstartdevice = "https://gw.ulbi.ac.id/api/start/device/"+getCookie("login");
 
 export default function StartDevice(){
     const button = document.getElementById('btn');
