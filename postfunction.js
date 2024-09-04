@@ -3,7 +3,7 @@ import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { get } from "https://jscroot.github.io/api/croot.js";
 
-let urldevice = "https://gw.ulbi.ac.id/api/device/+" + getCookie("login");
+let urldevice = "https://gw.ulbi.ac.id/api/device/" + getCookie("login");
 
 export default function PostSignUp() {
     const button = document.getElementById('btn');
